@@ -1,0 +1,17 @@
+import random
+com_gues = random.randint(1,50)
+attempts=0
+# print(com_gues)
+while(True):
+    NUM=int(input("Guess a Number between 1 to 50:"))
+    attempts+=1
+    if (com_gues==NUM):
+        print("Your Guess is correct")
+        print(f''You Guessed in {attempts} attempts'')
+        break
+    elif abs(com_gues-NUM)<=5:
+        print("Your Guess is too close")
+    elif abs(com_gues-NUM)<=10:
+        print("Your Guess Close")
+    else:
+        print("Your Guess is too Far")
